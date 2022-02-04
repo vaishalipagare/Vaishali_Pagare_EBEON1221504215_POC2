@@ -1,0 +1,67 @@
+Question 5: 
+	- Write a Java program to find the sum of two arrays elements?
+		array1[] = {10, 20, 30, 40, 50};  // Take values form Keyboard
+		array2[] = {9, 18, 27, 36, 45};	 //  Take Values form keyboard
+
+Ans.:
+package AssignmentNo2;
+import java.util.Scanner;
+import java.util.Arrays;
+
+public class QuestionNo5 {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+
+	   
+	    System.out.print("Enter number of elements in first array: ");
+	    int arrayFirst = sc.nextInt();
+	    System.out.print("Enter number of elements in second array: ");
+	    int arraySecond = sc.nextInt();
+
+	   
+	    if(arrayFirst != arraySecond) {
+	      System.out.println("Both array must have "+
+	                      "same number of elements");
+	      return;  
+	    }
+
+	   
+	    int First[] = new int[arrayFirst];
+	    int Second[] = new int[arrayFirst];
+	    int Sum[] = new int[arrayFirst];
+
+	    
+	    System.out.println("Enter first array elements: ");
+	    for (int i=0; i<First.length; i++) {
+	    	First[i] = sc.nextInt();
+	    }
+
+	   
+	    System.out.println("Enter second array elements: ");
+	    for (int i=0; i<Second.length; i++) {
+	    	Second[i] = sc.nextInt();
+	    }
+
+	   
+	    for (int i=0; i<Sum.length; i++) {
+	      
+	    	Sum[i] = First[i] + Second[i];
+	    }
+
+	   
+	    System.out.println("Resultant Array: "+ Arrays.toString(Sum));
+	}
+
+}
+
+O/P:
+Enter number of elements in first array: 
+5
+Enter number of elements in second array: 5
+Enter first array elements: 
+10 20 30 40 50
+Enter second array elements: 
+
+9 18 27 36 45
+Resultant Array: [19, 38, 57, 76, 95]

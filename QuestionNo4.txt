@@ -1,0 +1,61 @@
+Question 4: 
+	- Write a Java program to count the even and odd numbers in the given array.
+
+Ans.:
+package AssignmentNo2;
+
+import java.util.Scanner;
+
+public class questionNo4 {
+
+	public static void main(String[] args) {
+	    
+		int num;
+        Scanner sc = new Scanner(System.in);
+        
+        
+        
+        System.out.print("Enter no. of elements you want in array:");
+        num = sc.nextInt();
+        int a[] = new int[num];
+        System.out.println("Enter all the elements:");
+        
+        
+        
+        for (int i = 0; i < num; i++) 
+        {
+            a[i] = sc.nextInt();
+        }
+        System.out.print("Odd numbers:");
+        for(int i = 0 ; i < num ; i++)
+        {
+            if(a[i] % 2 != 0)
+            {
+                System.out.print(a[i]+" ");
+            }
+        }
+        System.out.println("");
+        System.out.print("Even numbers:");
+        for(int i = 0 ; i < num ; i++)
+        {
+            if(a[i] % 2 == 0)
+            {
+                System.out.print(a[i]+" ");
+            }
+        }
+    
+
+	}
+
+}
+
+O/P:
+Enter no. of elements you want in array:5
+Enter all the elements:
+1
+2
+3
+4
+5
+Odd numbers:1 3 5 
+Even numbers:2 4 

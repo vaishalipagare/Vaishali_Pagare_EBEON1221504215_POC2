@@ -1,0 +1,71 @@
+Question 2: Follow naming convention rule
+	
+	- Write a program to find the sum and product of all elements of an array.
+Ans.:
+package AssignmentNo2;
+
+import java.util.Scanner;
+
+public class questionNo2 {
+
+	public static void main(String[] args) {
+		
+		int sum =0,prod=1;
+		
+		int[][] newArray =new int[3][3];
+		
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Insert Array :");
+		
+		for (int i=0; i<3;i++)
+		{
+			for (int j=0;j<3;j++)
+			{
+				System.out.println("Insert Postion of Array"+"["+i+"]"+"["+j+"]"+"Element");
+				newArray[i][j] = sc.nextInt();
+				sum=sum+ newArray[i][j];
+				 prod =prod* newArray[i][j];
+			}
+		}
+			
+		System.out.println("Inserted Array Elements Are :");
+
+	for(int i=0; i<3;i++){
+		for(int j=0;j<3;j++){
+			System.out.print(newArray[i][j]+" ");
+		}
+		System.out.println();
+	}
+	System.out.println("Sum of array  :"+sum);
+	System.out.println("Product of array  :"+prod);
+
+	}
+
+}
+
+O/P:
+Insert Array :
+Insert Postion of Array[0][0]Element
+1
+Insert Postion of Array[0][1]Element
+2
+Insert Postion of Array[0][2]Element
+3
+Insert Postion of Array[1][0]Element
+4
+Insert Postion of Array[1][1]Element
+5
+Insert Postion of Array[1][2]Element
+6
+Insert Postion of Array[2][0]Element
+7
+Insert Postion of Array[2][1]Element
+8
+Insert Postion of Array[2][2]Element
+9
+Inserted Array Elements Are :
+1 2 3 
+4 5 6 
+7 8 9 
+Sum of array  :45
+Product of array  :362880
